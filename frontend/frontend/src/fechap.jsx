@@ -25,7 +25,7 @@ export default function Fechap() {
 
         if (!userId || role !== "admin" || auth !== "ok") {
             alert("Acceso denegado.");
-            window.location.href = "index.html";
+            window.location.href = "/"; 
         } else {
             cargarProyectos();
         }
