@@ -1,0 +1,104 @@
+.body-bg {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a192f, #1a4079);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f0f0f0;
+}
+
+.login-container {
+    background: #f5f7fa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    color: #1a4079;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a4079;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a4079;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1a4079;
+    font-size: 1rem;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1a4079;
+    background: #f9f9f9;
+}
+
+/* 👁️ Icono mostrar/ocultar contraseña */
+.toggle-password {
+    position: absolute;
+    top: 38px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #1a4079;
+    user-select: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #1a4079;
+    color: white;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #163665;
+}
+
+.error-msg {
+    margin-top: 15px;
+    color: #c0392b;
+    font-weight: bold;
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}

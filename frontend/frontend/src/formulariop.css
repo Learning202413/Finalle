@@ -1,0 +1,100 @@
+/* formulario.css encapsulado para Formulario.jsx */
+.formulario-page {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --blue: #1a237e;
+    --bluedark: #303f9f;
+    --radius: 18px;
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--bg);
+    padding-top: 40px;
+}
+
+/* CONTENEDOR */
+.formulario-page .form-container {
+    background: var(--surface);
+    width: 90%;
+    max-width: 800px;
+    padding: 35px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--text);
+}
+
+/* TÍTULO */
+.formulario-page h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+/* ETIQUETAS E INPUTS */
+.formulario-page label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.formulario-page input,
+.formulario-page select,
+.formulario-page textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 1rem;
+    margin-top: 6px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.formulario-page input:focus,
+.formulario-page select:focus,
+.formulario-page textarea:focus {
+    border-color: var(--blue);
+    background: #fff;
+    box-shadow: 0 0 4px rgba(63, 81, 181, 0.3);
+}
+
+.formulario-page textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* BOTONES */
+.formulario-page .btn-registrar {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.formulario-page .btn-registrar:hover {
+    background: var(--bluedark);
+}
+
+.formulario-page .back-btn {
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}

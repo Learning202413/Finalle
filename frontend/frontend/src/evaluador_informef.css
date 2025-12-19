@@ -1,0 +1,181 @@
+.evalif-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    box-sizing: border-box;
+}
+
+.evalif-body *,
+.evalif-body *:before,
+.evalif-body *:after {
+    box-sizing: inherit;
+}
+
+.evalif-header {
+    background: #1a4079;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.evalif-title {
+    text-align: center;
+    width: 100%;
+}
+
+.evalif-container {
+    max-width: 900px;
+    width: 95%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.evalif-search-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.evalif-search-box input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #1a4079;
+    outline: none;
+}
+
+.evalif-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.evalif-filter-btn {
+    padding: 8px 14px;
+    background: #e3e8f0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 1px solid #1a4079;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.evalif-filter-btn:hover {
+    background: #cfd6e3;
+}
+
+.evalif-filter-active {
+    background: #1a4079 !important;
+    color: white;
+    border-color: #1a4079;
+}
+
+.evalif-project-list {
+    margin-top: 20px;
+}
+
+.evalif-project-item {
+    padding: 18px;
+    margin-bottom: 15px;
+    background: #eef2f7;
+    border-radius: 12px;
+    border-left: 6px solid #1a4079;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.evalif-project-item:hover {
+    background: #d7deea;
+    transform: scale(1.01);
+}
+
+.evalif-project-item strong {
+    font-size: 1.15rem;
+    color: #1a4079;
+}
+
+.evalif-no-projects {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.evalif-logout-btn {
+    position: absolute;
+    right: 20px;
+    padding: 8px 16px;
+    background: #c0392b;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.evalif-logout-btn:hover {
+    background: #a53024;
+}
+
+.evalif-back-btn {
+    position: absolute;
+    left: 20px;
+    padding: 8px 14px;
+    background: #1a4079;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.evalif-back-btn:hover {
+    background: #16345f;
+}
+
+.evalif-pdf-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.evalif-btn.evalif-pdf {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.evalif-btn.evalif-pdf.success {
+    background: #1a4079;
+}
+
+.evalif-btn.evalif-pdf.success:hover {
+    background: #16345f;
+}
+
+.evalif-btn.evalif-pdf.danger {
+    background: #c0392b;
+}
+
+.evalif-btn.evalif-pdf.danger:hover {
+    background: #a53024;
+}

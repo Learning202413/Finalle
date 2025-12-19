@@ -1,0 +1,156 @@
+.evaA-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+.evaA-header {
+    background: #1a4079;
+    color: white;
+    padding: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.evaA-back-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: white;
+    color: #1a4079;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.evaA-container {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.evaA-container h2 {
+    color: #1a4079;
+    border-left: 6px solid #1a4079;
+    padding-left: 10px;
+}
+
+/* CRITERIOS */
+.evaA-criterion {
+    display: flex;
+    justify-content: space-between;
+    background: #eef2f7;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.evaA-criterion select {
+    padding: 5px;
+}
+
+/* BOTÓN GUARDAR */
+.evaA-submit-btn {
+    background: #1a4079;
+    color: white;
+    padding: 14px;
+    border: none;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* PDF Viewer */
+.evaA-pdf-viewer iframe {
+    width: 100%;
+    height: 420px;
+    margin-top: 20px;
+    border: 2px solid #1a4079;
+    border-radius: 10px;
+}
+
+/* LOADER */
+.evaA-loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.evaA-loader {
+    border: 8px solid #e3e3e3;
+    border-top: 8px solid #1a4079;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: evaA-spin 1s linear infinite;
+}
+
+@keyframes evaA-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* MODAL */
+.evaA-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.evaA-modal-box {
+    background: white;
+    width: 340px;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.evaA-modal-box h3 {
+    color: #1a4079;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.evaA-modal-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.evaA-modal-btn {
+    background: #1a4079;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}

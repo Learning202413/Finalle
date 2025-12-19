@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.docente-page {
+    background: #f4f6f9;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background: #1a4079;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+h2 {
+    margin-top: 0;
+    color: #1a4079;
+    border-left: 5px solid #1a4079;
+    padding-left: 10px;
+}
+
+.project-list {
+    margin-top: 20px;
+}
+
+/* 🔵 BOTÓN COMPLETO DEL PROYECTO */
+.project-item {
+    padding: 18px;
+    margin-bottom: 15px;
+    background: #eef2f7;
+    border-radius: 12px;
+    border-left: 6px solid #1a4079;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.project-item:hover {
+    background: #d7deea;
+    transform: scale(1.01);
+}
+
+.project-item strong {
+    font-size: 1.15rem;
+    color: #1a4079;
+}
+
+.no-projects {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón flotante */
+.btn-add {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #1a4079;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #163665;
+}
+
+.logout-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #c0392b;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #a53024;
+}

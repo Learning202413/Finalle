@@ -1,0 +1,76 @@
+.eia-body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f9; }
+
+.eia-header {
+    background: #1a4079;
+    color: white;
+    padding: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.eia-back-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: white;
+    color: #1a4079;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.eia-container {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.eia-projectInfo p { margin: 6px 0; }
+
+.eia-pdfViewer {
+    width: 100%;
+    height: 420px;
+    margin-top: 20px;
+    border: 2px solid #1a4079;
+    border-radius: 10px;
+}
+
+.eia-form { margin-top: 20px; }
+
+.eia-criterion {
+    display: flex;
+    justify-content: space-between;
+    background: #eef2f7;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.eia-criterion select { padding: 5px; }
+
+.eia-submit-btn {
+    background: #1a4079;
+    color: white;
+    padding: 14px;
+    border: none;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.eia-section-title { color: #1a4079; margin-top: 25px; }
+
+.eia-estado { color: white; padding: 5px 12px; border-radius: 6px; }
+.eia-estado.eia-gray { background: gray; }
+.eia-estado.green { background: green; }
+.eia-estado.goldenrod { background: goldenrod; }
+.eia-estado.red { background: red; }

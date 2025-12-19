@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+header {
+    background: #1a4079;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* necesario para posicionar el botón */
+}
+
+header .title {
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    width: 95%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-top: 0;
+    color: #1a4079;
+    border-left: 5px solid #1a4079;
+    padding-left: 10px;
+}
+
+/* BUSCADOR */
+.search-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #1a4079;
+    outline: none;
+}
+
+/* FILTROS */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 14px;
+    background: #e3e8f0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 1px solid #1a4079;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: #cfd6e3;
+}
+
+.filter-active {
+    background: #1a4079 !important;
+    color: white;
+    border-color: #1a4079;
+}
+
+/* LISTA DE PROYECTOS */
+.project-list {
+    margin-top: 20px;
+}
+
+.project-item {
+    padding: 18px;
+    margin-bottom: 15px;
+    background: #eef2f7;
+    border-radius: 12px;
+    border-left: 6px solid #1a4079;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.project-item:hover {
+    background: #d7deea;
+    transform: scale(1.01);
+}
+
+.project-item strong {
+    font-size: 1.15rem;
+    color: #1a4079;
+}
+
+/* MENSAJE VACÍO */
+.no-projects {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logout-btn {
+    position: absolute;
+    right: 20px;
+    padding: 8px 16px;
+    background: #c0392b;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #a53024;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    padding: 8px 14px;
+    background: #1a4079;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #16345f;
+}
+
+.pdf-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn.pdf {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.btn.pdf.success {
+    background: #1a4079;
+}
+
+.btn.pdf.success:hover {
+    background: #16345f;
+}
+
+.btn.pdf.danger {
+    background: #c0392b;
+}
+
+.btn.pdf.danger:hover {
+    background: #a53024;
+}
