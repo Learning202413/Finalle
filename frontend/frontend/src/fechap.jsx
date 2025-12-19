@@ -146,8 +146,8 @@ export default function Fechap() {
 
     const cerrarSesion = () => {
         localStorage.clear();
-        window.location.href = "/index";
-    };
+        window.location.href = "/"; 
+    };;
 
     return (
         <div className="fechap-root">
