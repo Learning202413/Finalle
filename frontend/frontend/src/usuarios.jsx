@@ -66,7 +66,7 @@ export default function Usuarios() {
 
     const logout = () => {
         localStorage.clear();
-        window.location.href = "/index";
+        window.location.href = "/";
     };
 
     const handleChange = (e) => {
