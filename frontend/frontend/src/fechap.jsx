@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import jsPDF from "jspdf";
-import "jspdf-autotable";
+//import jsPDF from "jspdf";
+//import "jspdf-autotable";
 import "./fechap.css";
 
 const SUPABASE_URL = "https://bxjqdsnekmbldvfnjvpg.supabase.co";
@@ -107,26 +107,41 @@ export default function Fechap() {
         cargarProyectos();
     };
 
-    const generarPDF = () => {
-        const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+    const generarPDF = async () => {
+        try {
+            // Usamos el estado seleccionado en el filtro (ej. "todos", "Innovación...", etc.)
+            // Ojo: asegúrate que 'tipoSeleccionado' tenga un valor válido que coincida con tu BD
+            // Si quieres filtrar por estado "aprobado", puedes forzarlo o enviar el parámetro que desees.
 
-        doc.setFontSize(16);
-        doc.text("Listado de Proyectos Registrados", 10, 15);
+            // Aquí enviamos el filtro actual de la pantalla
+            const filtro = tipoSeleccionado === "todos" ? "" : tipoSeleccionado;
 
-        const rows = proyectos.map((p, i) => [i + 1, p.titulo, p.tipo, p.integrantes || "No especificado"]);
+            // Llamada al Microservicio
+            const response = await fetch(
+                            `https://microservicio-reportes.onrender.com/api/reportes/proyectos/pdf?estado=${encodeURIComponent(filtro)}`
+                        );
 
-        doc.autoTable({
-            head: [["N°", "Título del Proyecto", "Tipo de Investigación", "Integrantes"]],
-            body: rows,
-            startY: 25,
-            styles: { fontSize: 10, cellPadding: 3, halign: "left", valign: "middle", overflow: "linebreak" },
-            headStyles: { fillColor: [26, 64, 121], textColor: 255, fontStyle: "bold", halign: "center" },
-            columnStyles: { 0: { cellWidth: 15, halign: "center" }, 1: { cellWidth: 85 }, 2: { cellWidth: 45 }, 3: { cellWidth: 45 } },
-            alternateRowStyles: { fillColor: [245, 245, 245] },
-            margin: { left: 10, right: 10 },
-        });
+            if (!response.ok) {
+                const msg = await response.json();
+                alert("Atención: " + (msg.message || "Error al generar reporte"));
+                return;
+            }
 
-        doc.save("informacion_proyectos.pdf");
+            // Descargar el archivo que nos devuelve el backend
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `reporte_proyectos_${tipoSeleccionado}.pdf`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+
+        } catch (error) {
+            console.error("Error conectando con microservicio:", error);
+            alert("Error: No se pudo conectar con el Microservicio de Reportes (¿Está encendido en puerto 3001?)");
+        }
     };
 
     const cerrarSesion = () => {
